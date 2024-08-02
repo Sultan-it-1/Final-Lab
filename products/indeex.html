@@ -5,25 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="filter.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Products</h1>
+        <h1>Online Store</h1>
         <nav>
             <ul>
                 <li><a href="https://sultan-it-1.github.io/Final-Lab/">Home</a></li>
                 <li><a href="https://sultan-it-1.github.io/Final-Lab/products">Products</a></li>
-                <li><a href="https://sultan-it-1.github.io/Final-Lab/contact">Contact</a></li>
-                <li><a href="https://sultan-it-1.github.io/Final-Lab/about">About Us</a></li>
+                <li><a href="https://sultan-it-1.github.io/Final-Lab/cart">Cart</a></li>
+                <li><a href="https://sultan-it-1.github.io/Final-Lab/checkout">Checkout</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <h2>Our Products</h2>
-        <!-- Content for the products page -->
+        <section>
+            <h2>Product Listings</h2>
+            <div id="filters">
+                <input type="text" id="search" placeholder="Search products...">
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="category1">Category 1</option>
+                    <option value="category2">Category 2</option>
+                </select>
+                <input type="number" id="price-min" placeholder="Min price">
+                <input type="number" id="price-max" placeholder="Max price">
+                <button onclick="applyFilters()">Apply Filters</button>
+            </div>
+            <div id="product-list">
+                <!-- Product items will be loaded here via AJAX -->
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 My Online Store</p>
+        <p>&copy; 2024 Online Store. All rights reserved.</p>
     </footer>
 </body>
 </html>
