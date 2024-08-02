@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#product-detail img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+    flex: 1;
+}
+
+#product-detail div {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+#product-detail h2 {
+    margin-top: 0;
+}
+
+#product-detail p {
+    margin: 10px 0;
+}
+
+#product-detail label {
+    font-weight: bold;
+}
+
+#quantity {
+    width: 50px;
+    margin-right: 10px;
+}
+
+#add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#shopping-cart {
+    margin-top: 20px;
+}
+
+#shopping-cart h2 {
+    margin-bottom: 10px;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#total-price {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #product-detail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #product-detail img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        position: static;
+    }
+}
